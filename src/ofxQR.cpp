@@ -181,6 +181,23 @@ void QRCode::renderToPixels()
     }
 }
 
+std::string QRCode::to_string(ECC ecc)
+{
+    switch (ecc)
+    {
+        case QRCode::ECC::LOW:
+            return "LOW";
+        case QRCode::ECC::MEDIUM:
+            return "MEDIUM";
+        case QRCode::ECC::QUARTILE:
+            return "QUARTILE";
+        case QRCode::ECC::HIGH:
+            return "HIGH";
+    }
+
+    return "LOW";
+}
+
 
 const qrcodegen::QrCode::Ecc QRCode::toEcc(QRCode::ECC ecc) const
 {

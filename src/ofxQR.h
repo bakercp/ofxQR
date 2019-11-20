@@ -62,6 +62,7 @@ public:
     /// \brief The number of border modules used to outline the QR code.
     static const std::size_t DEFAULT_NUM_BORDER_MODULES = 1;
 
+    static std::string to_string(ECC ecc);
 private:
     void renderToPixels();
 
